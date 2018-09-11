@@ -1,0 +1,18 @@
+<!-- Main Menu Header -->
+<ion-header>
+    <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon class="icon-menu" name="menu"></ion-icon>
+    </button>
+    <ion-title text-uppercase>{{titleElements}}</ion-title>
+    </ion-navbar>
+</ion-header>
+<!-- Main Menu List -->
+<ion-content>
+    <div *ngIf="data.background!=null" background-size default-background [ngStyle]="{'background-image': 'url(' + data.background + ')'}">
+        <div class="ionic-description" text-center>
+            <h2 item-title>CONSULTA</h2>
+            <p item-subtitle>Classes, raças, magias, perícias, lojas e regras</p>
+        </div>
+    </div>
+</ion-content>

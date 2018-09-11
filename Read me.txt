@@ -1,0 +1,13 @@
+Hi,
+
+First of all - thank you for buying our template! 
+
+Before you use template, please read documentation for better understanding how to use it.
+http://csform.com/ionic-3/ionic-3-yellow/livepreview/
+
+We added series of video on theme "how to implement and use our template".
+You can watch them here: https://www.youtube.com/watch?v=FMR1BgGYbIE&list=PLQUKcFIakdPZ6cETZo3NRCvikLxZENH9G
+
+Also you can contact us at dev@csform.com if you need.
+
+Happy coding! :)
