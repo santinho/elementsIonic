@@ -16,6 +16,7 @@ export class HomePage {
   constructor(public navCtrl: NavController, public service: HomeService) {
     service.load().subscribe(snapshot => {
       this.data = snapshot;
+      navCtrl.setRoot('ElementsHomePage');
     });
   }
 }
