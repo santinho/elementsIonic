@@ -540,14 +540,14 @@ $range-ios-knob-background-color: theme-colors('mainColors', 'secondary');
 /* 36# Search Bar Setting
 ================================================*/
 // Settings for Ios
-$searchbar-ios-input-background-color: theme-colors('mainColors', 'primary') !important;
+$searchbar-ios-input-background-color: theme-colors('mainColors', 'primary');
 $searchbar-ios-input-placeholder-color: theme-colors('textColors', 'primary');
 $searchbar-ios-input-text-color: theme-colors('textColors', 'primary');
 $searchbar-ios-input-search-icon-color: theme-colors('mainColors', 'secondary');
 $searchbar-ios-input-clear-icon-color: theme-colors('mainColors', 'secondary');
 $searchbar-ios-background-color: transparent;
 // Settings for Android
-$searchbar-md-input-background-color: theme-colors('mainColors', 'primary') !important;
+$searchbar-md-input-background-color: theme-colors('mainColors', 'primary');
 $searchbar-md-input-placeholder-color: theme-colors('textColors', 'primary');
 $searchbar-md-input-search-icon-color: theme-colors('mainColors', 'secondary');
 $searchbar-md-input-clear-icon-color: theme-colors('mainColors', 'secondary');
@@ -841,7 +841,7 @@ $alert-ios-button-text-color: theme-colors('textColors', 'primary');
 
   .searchbar-md .searchbar-input {
     color: #ffffff!important;
-    background-color:   #ffffff!important;
+    background-color:   transparent!important;
   }
 
   .list-md{
