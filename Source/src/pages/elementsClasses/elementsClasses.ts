@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import { IonicPage, NavController } from 'ionic-angular';
 import { HomeService } from '../../services/home-service';
 import { AngularFireDatabase } from 'angularfire2/database';
+import { Observable } from 'rxjs';
 
 
 @IonicPage()
@@ -13,15 +14,17 @@ import { AngularFireDatabase } from 'angularfire2/database';
 })
 export class ElementsClassesPage {
   title: string = 'Classes';
+  list: Observable<any[]>;
+  listFiltered: Observable<any[]>;
+  lvls: number[] = [0,1,2,3,4,5,6,7,8,9,10]
 
   constructor(public navCtrl: NavController, public service: HomeService, public af: AngularFireDatabase) {
     console.log('classes');
     service.load().subscribe(snapshot => {
       this.data = snapshot;
     });
-    this.af.list('classes').valueChanges().map((classes)=>{
-      console.log(classes);
-    }).subscribe();
+    this.list = this.af.list('classes').valueChanges()
+    this.listFiltered = this.af.list('classes').valueChanges()
   }
 
   @Input() data: any;
@@ -31,23 +34,25 @@ export class ElementsClassesPage {
   allItems:any;
 
   getItems(event: any):void {
-    if (!this.allItems) {
-      this.allItems = this.data.items;
+    if (!this.list) {
+      this.list = this.listFiltered;
     }
-    this.data.items = this.allItems.filter((item) => {
-        return item.title.toLowerCase().indexOf(this.searchTerm.toLowerCase()) > -1;
+    this.list.subscribe((listaBD:any[])=>{
+      let listaBDFiltrada = listaBD.filter((item) => {
+        return item['Nome'].toLowerCase().indexOf(event.target.value.toLowerCase()) > -1;
+      });
+      this.listFiltered = Observable.of(listaBDFiltrada);
+
     });
+     
   }
 
-  onEvent(event:string, item:any) {//ITEM [EVENT OR SELECTED ITEM]
-    if (this.events[event]) {
-      if ('onTextChange' === event) {
-        this.getItems(item);
-        this.events[event](this.searchTerm);
-      } else {
-        this.events[event](item);
-      }
-    }
-    console.log(event);
+  toggleGroup(group: any) {
+    group.show = !group.show;
   }
+
+  isGroupShown(group: any) {
+    return group.show;
+  }
+
 }

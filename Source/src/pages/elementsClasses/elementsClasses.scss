@@ -12,6 +12,7 @@ elements-page-classes {
 
       h2[item-title] {
         margin: 0;
+        color: white;
       }
 
       p[item-subtitle] {
@@ -26,6 +27,11 @@ elements-page-classes {
       position: absolute;
       bottom: 25px;
       left: 25px;
+    }
+
+    .item-md ion-thumbnail ion-img, .item-md ion-thumbnail img{
+      width: 32px;
+      height: 32px
     }
   }
 }
