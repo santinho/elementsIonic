@@ -103,14 +103,14 @@ $palettes: (
     mainColors: ( // Also used for backgrounds.
 
         primary:   #424242, // Used for list color, list activated button, list border item color, header-title, header-subtitle, button-clear-outline, swipe, checkbox, tabs, search-bar, map-header, maps-title, maps-subtitle, toolbar, action-sheet, Loading, alert
-        secondary:  #FCD736, // Used for icon, item-divider, span, header-bcg, header-divider, button, fab button, checkbox, toggle, radio button, wizard-bcg, input field, range, search-bar, map-header, map-content, toolbar-background, alert, spiner
+        secondary:  #ffffff, // Used for icon, item-divider, span, header-bcg, header-divider, button, fab button, checkbox, toggle, radio button, wizard-bcg, input field, range, search-bar, map-header, map-content, toolbar-background, alert, spiner
         accent:   #202020, //Used for background your app, list border item color, button, fab button, checkbox, action-sheet, alert
         accentLight: #FEFEFE //Used for toggle
     ),
 
     textColors: ( // Used for text colors in all screens
 
-        primary: #FCD736, // Used for text colors in: item-title, button-clear, card-title, parallax-title, parallax-subtitle, tabs-title, tabs-subtitle, search-bar, loading, action-sheet, alert, wizard-body-text, wizard-title
+        primary: #ffffff, // Used for text colors in: item-title, button-clear, card-title, parallax-title, parallax-subtitle, tabs-title, tabs-subtitle, search-bar, loading, action-sheet, alert, wizard-body-text, wizard-title
         secondary: #FEFEFE, // Used for text colors in: card-subtitle, item-subtitle, card-body-text, description, alert
         accent:   #ffffff, // Used for text colors in: subitem-title, swiped-item-title, subitem-subtitle
     ),
@@ -351,7 +351,7 @@ $icon-size:(
   background-color: theme-colors('mainColors', 'secondary') !important;
   color: theme-colors('mainColors', 'accent') !important;
   font-size: $h3-font-size !important;
-  font-weight: 500 !important;
+  font-weight: 300 !important;
   border-radius: $border-radius !important;
 }
 
@@ -789,4 +789,70 @@ $alert-ios-button-text-color: theme-colors('textColors', 'primary');
     [header-bcg] {
       position: relative !important;
     }
+  }
+
+  ion-navbar.toolbar{
+    background-color: #263238 !important;
+    height: 56px;
+    padding: 5px;
+    border-bottom: 1px solid #ef4437;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background-size: 100% 0;
+  }
+  .toolbar-background-md{
+    background-color: #263238 !important;
+    height: 56px;
+    padding: 5px;
+    border-bottom: 1px solid #ef4437;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background-size: 100% 0;
+  }
+  .toolbar-title-md {
+    padding: 0 12px;
+    font-size: 2rem;
+    font-weight: 300;
+    color: white!important;
+  }
+
+
+  .scroll-content {
+    position: absolute;
+    z-index: 101;
+    background-image: url(http://csform.com/ionic-theme/ionic-dark/img/background/31.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .collapsible-header{
+    border-color:transparent;
+    margin-bottom: 2px;
+    transition: all 0s ease-out;
+  }
+  
+
+  .item-md {
+    background-color: transparent!important;
+  }
+
+  [item-title]{
+    color: white!important
+  }
+
+  .searchbar-md .searchbar-input {
+    color: #ffffff!important;
+    background-color:   #ffffff!important;
+  }
+
+  .list-md{
+    background-color: rgba(55, 71, 79, 0.6) !important;
+  }
+
+  .bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default {
+    color: #ffffff!important;
+    background-color: transparent;
+  }
+
+  searchbar-input {
+    background-color:  transparent!important;
   }

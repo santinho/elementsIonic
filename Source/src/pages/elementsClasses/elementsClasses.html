@@ -15,7 +15,7 @@
         <ion-col col-12>
             <ion-list no-margin>
             <ion-list-header no-padding no-margin transparent>
-                <ion-searchbar placeholder="Buscar..." [(ngModel)]="searchTerm" (ionInput)="getItems($event)"></ion-searchbar>
+                <ion-searchbar placeholder="Buscar..." [(ngModel)]="searchTerm" (ionInput)="getItems($event)" style="background-color: transparent !important;"></ion-searchbar>
             </ion-list-header>
 
             <li *ngFor="let group of listFiltered | async">
@@ -23,7 +23,7 @@
               <div class="collapsible-header" (click)="toggleGroup(group)">
                 <ion-item no-padding>
                   <h2 padding-left item-title>{{group.Nome}}</h2>
-                  <h3 padding-left item-subtitle>HP:{{group.HP}}Perícia:{{group.Pericia}}</h3>
+                  <h3 padding-left item-subtitle>HP:{{group.HP}} Perícia:{{group.Pericia}}</h3>
                 </ion-item>
               </div>
               <!-- List big image Body -->
